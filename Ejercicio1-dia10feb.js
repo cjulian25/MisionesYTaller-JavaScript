@@ -149,5 +149,39 @@ for(var i = 0; i < 3; i++){
 
 promedio>5 ? console.log(`True`) : console.log(`False`) */
 
-/*8. Desarrolle un algoritma que reciba un numero entero e imprima si el numero es par o impar. 
+/*8. Desarrolle un algoritmo que reciba un numero entero e imprima si el numero es par o impar. 
 Ademas el numero debe ser positivo*/
+
+/*let num = parseInt(prompt("Digita un numero entero positivo"))
+
+while(num<0){
+num = parseInt(prompt("Digita un numero entero positivo"))
+}
+
+num%2 == 0 ? console.log("El numero es par") : console.log("El numero es impar")*/
+
+/*9. Crea un algoritmo que pida al usuario el diametro de una rueda y su grosor(en metros) y realice las siguientes operaciones:
+A. Si el diametro es superior a 1.4 debe mostrarse el mensaje "La rueda es para un vehiculo mediano".
+Si no se cmplen ninguna de las codiciones anteriores debe mostrar por pantalla el mensaje
+"La rueda es para un vehiculo pequeño".
+B. Si el diametro es superior a 1.4 con un grosor inferior a 0.4, ó si el diametro es menor o igual a 1.4
+pero mayor a 0.8 con un grosor inferior a 0.25, deberá mostrar el mensaje
+"El grosor para esta rueda es inferior al recomendado".*/
+
+/*let diametro = parseFloat(prompt("Digita el diametro de la rueda en metros"))
+while(diametro<0 | diametro>25){
+	diametro = parseFloat(prompt("Digita el diametro de la rueda en metros, valor valido de 0.0 a 25.0"))
+}
+
+let grosor = parseFloat(prompt("Digita el grosor de la rueda en metros"))
+while(grosor<0 | grosor > 10){
+	grosor = parseFloat(prompt("Digita el grosor de la rueda en metros, valor valido de 0.0 a 10.0"))
+}
+
+if(diametro > 1.4 & grosor > 4.0){
+	console.log(`La rueda es para un vehiculo grande`)
+} else if((diametro>0.8 & diametro<=1.4) & (grosor>=0.4 & grosor<=4.0)){
+	console.log(`La rueda es para un vehiculo pequeño`)
+} else if((diametro>1.4 & grosor<0.4) | ((diametro > 0.8 & diametro<=1.4)& grosor<0.25)){
+	console.log(`El grosor para esta rueda es inferior al recomendado`)
+}*/
