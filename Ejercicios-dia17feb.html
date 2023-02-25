@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let usuarios = ["Austin", "Tasha", "Uniqua"]
+    let password = ["123456", "contraseña", "qwerty"]
+    
+    let bandera
+    let usuario 
+    let contrasenia
+    let contador = 3
+
+    while(contador>0){    
+
+        usuario = prompt("Digita tu usuario").toLowerCase() 
+        while(usuario==""){
+            usuario = prompt("Digita tu usuario").toLowerCase()   
+        }
+
+        contrasenia = prompt("Digita tu contraseña")
+        while(contrasenia==""){
+            contrasenia = prompt("Digita tu contraseña") 
+        } 
+
+        for(i=0;i<3;i++){
+            usuarios[i].toLowerCase() 
+            if(contrasenia == password[i] && usuario==usuarios[i]){
+                bandera = 1
+                break
+            }
+        } 
+
+        if(bandera == 1){ 
+            document.write("Logueando...")
+            break      
+        } 
+
+        if(bandera !=1){
+            contador-=1
+            alert(`Datos incorrectos: te quedan ${contador} intentos`)
+        }   
+    } 
+    </script>
+</body>
+</html>
