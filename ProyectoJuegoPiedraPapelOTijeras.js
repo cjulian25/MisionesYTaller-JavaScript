@@ -18,7 +18,7 @@ let perdio = 0 //contador para determinar quien perdio
 let empate = 0 //contador para determinar si hubo empate
 let contenido = ""
 
-const piedraPapelOTijeras = [1, 2, 1, 2] //Array para guardar los numeros random (0=piedra, 1=papel, 2=tijeras)
+const piedraPapelOTijeras = [] //Array para guardar los numeros random (0=piedra, 1=papel, 2=tijeras)
 
 aceptar.addEventListener("click", () => {
 
@@ -41,7 +41,7 @@ aceptar.addEventListener("click", () => {
 
 nuevoJuego.addEventListener("click", () => {
 
-    //piedraPapelOTijeras.splice(0, numeroEnfrentamientos.value)
+    piedraPapelOTijeras.splice(0, numeroEnfrentamientos.value)
 
     numeroEnfrentamientos.value = ""
     contenido = ""
@@ -147,11 +147,11 @@ tijeras.addEventListener("click", () => {
 
 botonResultado.addEventListener("click", () => {
     if (gano > perdio && gano >= empate) {
-        contenido += `<br><br><table style="background-color:#90c3f7"><th>  Felicidades GANASTE el encuentro, Con un total de ${gano} rondas ganas  </th></table>`
+        contenido += `<br><br><table style="background-color:#90c3f7"><th>  Felicidades GANASTE el encuentro, Con un total de ${gano} ronda(s) gana(s), ${perdio} ronda(s) perdida(s) y ${empate} ronda(s) empatada(s)  </th></table>`
     } else if (perdio > gano && perdio >= empate) {
-        contenido += `<br><br><table style="background-color:#90c3f7"><th>  Lo siento PERDISTE el encuentro, Con un total de ${perdio} rondas perdidas  </th></table>`
+        contenido += `<br><br><table style="background-color:#90c3f7"><th>  Lo siento PERDISTE el encuentro, Con un total de ${perdio} ronda(s) perdida(s), ${gano} ronda(s) ganada(s) y ${empate} ronda(s) empatada(s)  </th></table>`
     } else if ((empate >= gano && empate >= perdio) || gano == perdio) {
-        contenido += `<br><br><table style="background-color:#90c3f7"><th>  Hubo un EMPATE, Con un total de ${contadorIntentos} rondas jugadas  </th></table>`
+        contenido += `<br><br><table style="background-color:#90c3f7"><th>  Hubo un EMPATE, Con un total de ${empate} juego(s) empatado(s), ${gano} ronda(s) ganada(s) y ${perdio} ronda(s) perdida(s)  </th></table>`
     }
 
     document.getElementById("pantalla").innerHTML = contenido
